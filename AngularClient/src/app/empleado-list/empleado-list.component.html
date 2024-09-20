@@ -1,0 +1,46 @@
+
+<div class="container">
+    <div class="row">
+        <div class="col-12 text-center">
+            <h2>Listado de Empleados</h2>
+            <a [routerLink]="[ '/empleados/alta']" class="btn btn-success">Alta</a>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-12">
+            <table class="table">
+                <thead>
+                  <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Nombre</th>
+                    <th scope="col">Num. Empleado</th>
+                    <th scope="col">Fecha Alta</th>
+                    <th scope="col"></th>
+                    <th scope="col"></th>
+                    <th scope="col"></th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr *ngFor = "let c of listado">
+                    <th scope="row">{{c.idEmpleado}}</th>
+                    <td scope="row">{{ c.nombreEmpleado + ' ' + c.apellidoPaterno + ' ' + c.apellidoMaterno }}</td>
+                    <td scope="row">{{c.numeroEmpleado}}</td>
+                    <td scope="row">{{c.fechaAlta}}</td>
+                    <td>
+                      <a [routerLink]="[ '/empleados/detalle/',c.idEmpleado]" class="btn btn-success">Detalle</a>
+                    </td>
+
+                    <td>
+                      <a [routerLink]="[ '/empleados/editar/',c.idEmpleado]" class="btn btn-primary">Editar</a>
+                    </td>
+
+                    <td>
+                      <button class="btn btn-danger" (click)="eliminar(c.idEmpleado)">Eliminar</button>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+        </div>
+    </div>
+</div>

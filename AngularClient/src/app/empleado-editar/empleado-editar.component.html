@@ -1,0 +1,56 @@
+<div class="container">
+    <div class="row">
+        <div class="con-12 text-center">
+            <h2>Alta de Empleado</h2>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-12">
+            <div class="form-group">
+                <label for="nombreEmpleado">Nombre</label>
+                <input type="text" id="nombreEmpleado" class="form-control" #nombreEmpleado>
+            </div>
+            
+            <div class="form-group">
+                <label for="apellidoPaterno">Apellido Paterno</label>
+                <input type="text" id="apellidoPaterno" class="form-control" #apellidoPaterno>
+            </div>
+            
+            <div class="form-group">
+                <label for="apellidoMaterno">Apellido Materno</label>
+                <input type="text" id="apellidoMaterno" class="form-control" #apellidoMaterno>
+            </div>
+            
+            <div class="form-group">
+                <label for="numeroEmpleado">Número de Empleado</label>
+                <input type="number" id="numeroEmpleado" class="form-control" #numeroEmpleado>
+            </div>
+            
+            <div class="form-group">
+                <label for="fechaAlta">Fecha de Alta</label>
+                <input type="date" id="fechaAlta" class="form-control" #fechaAlta>
+            </div>
+            
+            <div class="form-group">
+                <label for="rfc">RFC</label>
+                <input type="text" id="rfc" class="form-control" #rfc>
+            </div>
+            
+            <div class="form-group">
+                <label for="nss">NSS</label>
+                <input type="text" id="nss" class="form-control" #nss>
+            </div>
+            
+            <div class="form-group">
+                <label for="curp">CURP</label>
+                <input type="text" id="curp" class="form-control" #curp>
+            </div>
+
+
+            <div class="form-group">
+                <button class="btn btn-success" (click)="guardarEmpleado()">Guardar</button>
+            </div>
+        </div>
+    </div>
+</div>
